@@ -48,6 +48,56 @@ foreach (var insight in result.VerifierResults)
 }
 ```
 
+# Fraudulent URL Report
+
+**Final Score:** -205  
+**Status:** **Fraud**
+
+---
+
+### Verifier Breakdown
+
+- **[SchemeVerifier]**
+  - **Score:** -50  
+  - **Reason:** The URL uses unencrypted HTTP  
+  - **Risk:** High
+
+- **[SubdomainAbuseVerifier]**
+  - **Score:** -30  
+  - **Reason:** Suspicious subdomain nesting  
+  - **Risk:** Medium
+
+- **[BrandSpoofVerifier]**
+  - **Score:** -40  
+  - **Reason:** Potential brand spoofing  
+  - **Risk:** High
+
+- **[HomographVerifier]**
+  - **Score:** -50  
+  - **Reason:** Homograph attack detected  
+  - **Risk:** Critical
+
+- **[PathKeywordVerifier]**
+  - **Score:** -10  
+  - **Reason:** Suspicious path keywords detected  
+  - **Risk:** Medium
+
+- **[QueryParameterAbuseVerifier]**
+  - **Score:** -15  
+  - **Reason:** Sensitive query parameters found  
+  - **Risk:** Medium
+
+- **[ShortenerVerifier]**
+  - **Score:** 0  
+  - **Reason:** No issues found  
+  - **Risk:** Medium
+
+- **[TldSuspicionVerifier]**
+  - **Score:** -30  
+  - **Reason:** Suspicious top-level domain  
+  - **Risk:** Medium
+
+
 ---
 
 ## 🔐 Example Verifiers
